@@ -1,0 +1,35 @@
+import java.util.*;
+class Solution {
+    String firstRepChar(String s) {
+        
+        Set <Character> seen=new HashSet<>();
+        
+        for(int i=0;i<s.length();i++){
+            char ch=s.charAt(i);
+            
+            if(seen.contains(ch)){
+                return String.valueOf(ch);
+            }
+            
+            else{
+                seen.add(ch);
+            }
+        }
+        return "-1";
+         
+    }
+        public static void main(String[] args){
+             Scanner sc=new Scanner(System.in);
+             
+             String s1=sc.next();
+             
+             Solution obj=new Solution();
+             String result=obj.firstRepChar(s1);
+             
+             System.out.println(result);
+             
+             
+             
+         }
+        
+    }
